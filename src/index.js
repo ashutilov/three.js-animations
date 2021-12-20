@@ -1,1 +1,1 @@
-import "./examples/solarSystem";
+import "./examples/tank";
