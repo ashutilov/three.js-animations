@@ -1,1 +1,1 @@
-import "./examples/fundamentals";
+import "./examples/tiger";
