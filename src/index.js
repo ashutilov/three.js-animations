@@ -1,1 +1,1 @@
-import "./examples/tank";
+import "./examples/textures";
