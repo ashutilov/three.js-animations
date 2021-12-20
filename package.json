@@ -1,0 +1,25 @@
+{
+  "name": "three.js",
+  "version": "1.0.0",
+  "description": "three.js animations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --watch --progress --config webpack.config.js"
+  },
+  "author": "lx",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.113.0"
+  },
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
+    "gltf-webpack-loader": "^1.0.6",
+    "npm-check-updates": "^12.0.5",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}

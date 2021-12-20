@@ -1,0 +1,8 @@
+node_modules
+public/*.js
+public/*.bin
+public/*.png
+public/*.gltf
+public/*.jpeg
+public/*.db
+package-lock.json
