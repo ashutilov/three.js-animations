@@ -1,1 +1,1 @@
-import "./examples/textures";
+import "./examples/cube";
