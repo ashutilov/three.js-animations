@@ -1,1 +1,1 @@
-import "./examples/screencast";
+import "./examples/solarSystem";
