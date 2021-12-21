@@ -7,10 +7,10 @@ import {
   FaceColors,
   SphereGeometry,
   MeshBasicMaterial,
-  Mesh
+  Mesh,
 } from "three";
 import { GUI } from "three/examples/jsm/libs/dat.gui.module.js";
-import Stats from 'three/examples/jsm/libs/stats.module.js'
+import Stats from "three/examples/jsm/libs/stats.module.js";
 import "../css/styles.css";
 
 let sphere, renderer, scene, camera, mesh, stats;
@@ -21,41 +21,17 @@ sphere = {
   positionZ: 0,
   rotationX: 0,
   rotationY: 0,
-  rotationZ: 0
+  rotationZ: 0,
 };
 
 let initGui = () => {
   let gui = new GUI();
-  gui
-    .add(sphere, "positionX")
-    .min(-5)
-    .max(5)
-    .step(0.01);
-  gui
-    .add(sphere, "positionY")
-    .min(-5)
-    .max(5)
-    .step(0.01);
-  gui
-    .add(sphere, "positionZ")
-    .min(-5)
-    .max(5)
-    .step(0.01);
-  gui
-    .add(sphere, "rotationX")
-    .min(-0.2)
-    .max(0.2)
-    .step(0.001);
-  gui
-    .add(sphere, "rotationY")
-    .min(-0.2)
-    .max(0.2)
-    .step(0.001);
-  gui
-    .add(sphere, "rotationZ")
-    .min(-0.2)
-    .max(0.2)
-    .step(0.001);
+  gui.add(sphere, "positionX").min(-5).max(5).step(0.01);
+  gui.add(sphere, "positionY").min(-5).max(5).step(0.01);
+  gui.add(sphere, "positionZ").min(-5).max(5).step(0.01);
+  gui.add(sphere, "rotationX").min(-0.2).max(0.2).step(0.001);
+  gui.add(sphere, "rotationY").min(-0.2).max(0.2).step(0.001);
+  gui.add(sphere, "rotationZ").min(-0.2).max(0.2).step(0.001);
 };
 
 let initStats = () => {
@@ -86,7 +62,7 @@ let init = () => {
   geometry = new SphereGeometry(300, 32, 32);
   material = new MeshBasicMaterial({
     color: 0xffffff,
-    vertexColors: FaceColors
+    vertexColors: FaceColors,
   });
 
   for (var i = 0; i < geometry.faces.length; i++) {
