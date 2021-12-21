@@ -7,20 +7,3 @@ canvas {
   height: 100vh;
   display: block;
 }
-#info {
-  position: absolute;
-  top: 10px;
-  width: 100%;
-  text-align: center;
-  z-index: 100;
-  display: block;
-}
-#info2 {
-  position: absolute;
-  left: 1em;
-  top: 1em;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 0.5em;
-  color: white;
-  font-family: monospace;
-}
