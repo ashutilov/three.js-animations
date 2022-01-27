@@ -24,7 +24,6 @@ To create bundle - online update during development
 
 ```
 npm run watch
-
 ```
 
 ## Deployment
