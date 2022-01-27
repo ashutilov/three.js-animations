@@ -1,4 +1,2 @@
 node_modules
-public/*.bin
-public/*.db
 package-lock.json
