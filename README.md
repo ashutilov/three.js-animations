@@ -1,4 +1,5 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/ashutilov/three.js-animations)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/ashutilov/three.js-animations)
 
 # Project Title
 
