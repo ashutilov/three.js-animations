@@ -1,3 +1,5 @@
+![GitHub package.json version](https://img.shields.io/github/package-json/v/ashutilov/three.js-animations)
+
 # Project Title
 
 Sandbox for three.js
