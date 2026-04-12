@@ -1,0 +1,48 @@
+diff --git a/node_modules/three/build/three.module.js b/node_modules/three/build/three.module.js
+index 6bc7814..af147eb 100644
+--- a/node_modules/three/build/three.module.js
++++ b/node_modules/three/build/three.module.js
+@@ -25034,6 +25034,13 @@ function WebGLTextures( _gl, extensions, state, properties, capabilities, utils,
+ 
+ 			setTextureParameters( textureType, texture );
+ 
++			if ( textureType === _gl.TEXTURE_3D || textureType === _gl.TEXTURE_2D_ARRAY ) {
++
++				_gl.pixelStorei( _gl.UNPACK_FLIP_Y_WEBGL, false );
++				_gl.pixelStorei( _gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, false );
++
++			}
++
+ 			let mipmap;
+ 			const mipmaps = texture.mipmaps;
+ 
+@@ -25421,6 +25428,9 @@ function WebGLTextures( _gl, extensions, state, properties, capabilities, utils,
+ 
+ 			}
+ 
++			_gl.pixelStorei( _gl.UNPACK_FLIP_Y_WEBGL, false );
++			_gl.pixelStorei( _gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, false );
++
+ 			sourceProperties.__version = source.version;
+ 
+ 			if ( texture.onUpdate ) texture.onUpdate( texture );
+@@ -25658,6 +25668,9 @@ function WebGLTextures( _gl, extensions, state, properties, capabilities, utils,
+ 
+ 			}
+ 
++			_gl.pixelStorei( _gl.UNPACK_FLIP_Y_WEBGL, false );
++			_gl.pixelStorei( _gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, false );
++
+ 			sourceProperties.__version = source.version;
+ 
+ 			if ( texture.onUpdate ) texture.onUpdate( texture );
+@@ -25688,6 +25701,9 @@ function WebGLTextures( _gl, extensions, state, properties, capabilities, utils,
+ 
+ 			if ( textureTarget === _gl.TEXTURE_3D || textureTarget === _gl.TEXTURE_2D_ARRAY ) {
+ 
++				_gl.pixelStorei( _gl.UNPACK_FLIP_Y_WEBGL, false );
++				_gl.pixelStorei( _gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, false );
++
+ 				state.texImage3D( textureTarget, level, glInternalFormat, width, height, renderTarget.depth, 0, glFormat, glType, null );
+ 
+ 			} else {

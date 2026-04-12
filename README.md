@@ -6,37 +6,51 @@
 
 # Project Title
 
-Sandbox for three.js
+Sandbox for three.js, built with [Vite](https://vitejs.dev/) and TypeScript.
 
+Several experiments that used to live on separate Git branches are combined here: pick an example from the **tab bar** at the top of the page. Only one WebGL view runs at a time so switching tabs disposes the previous demo and mounts the next (better for performance than stacking every canvas on one screen).
 
-## Getting Started
+## Getting started
 
-Install all required npm's
+Install dependencies:
 
-```
-npm install
-```
-
-To start dev server - go to public dir
-
-```
-cd public/
+```bash
+yarn install
 ```
 
+## Development
 
-## Installing
+Start the Vite dev server (with hot reload):
 
-To create bundle - online update during development
-
-```
-npm run watch
-```
-
-## Deployment
-
-To create bundle - one time command
-
-```
-npm run build
+```bash
+yarn dev
 ```
 
+Open the URL shown in the terminal (typically `http://localhost:5173`).
+
+Static assets served as-is from the project live in [`public/`](public/) (for example `favicon.png`).
+
+## Production build
+
+Create an optimized bundle in `dist/`:
+
+```bash
+yarn build
+```
+
+Preview the production build locally:
+
+```bash
+yarn preview
+```
+
+## Quality checks
+
+| Script            | Description                |
+| ----------------- | -------------------------- |
+| `yarn lint`       | ESLint                     |
+| `yarn typecheck`  | TypeScript (`tsc --noEmit`) |
+| `yarn test`       | Vitest (unit tests)        |
+| `yarn test:watch` | Vitest watch mode          |
+
+There is no coverage step in this project.
