@@ -15,7 +15,7 @@ import { disposeObjectTree } from "./disposeThree";
 import type { DemoFactory } from "./types";
 
 /** Served from `public/` so `scene.bin` and `textures/` resolve next to the glTF in dev and production. */
-const modelUrl = "/models/tiger/scene.gltf";
+const modelUrl = `${import.meta.env.BASE_URL}models/tiger/scene.gltf`;
 
 function resizeRendererToDisplaySize(renderer: WebGLRenderer): boolean {
   const canvas = renderer.domElement;
